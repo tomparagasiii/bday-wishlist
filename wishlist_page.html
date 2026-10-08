@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wishlist — Mischka Minnielle</title>
+<style>
+  :root {
+    --bg: #1a1a2e; --card: #16213e; --accent: #e94560; --accent2: #16a34a;
+    --text: #eee; --muted: #94a3b8; --border: #2a3a5c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); padding: 24px;
+    line-height: 1.6;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+  header.hero {
+    text-align: center; padding: 32px 0 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  header.hero h1 { font-size: 2rem; color: var(--accent); margin-bottom: 6px; }
+  header.hero .sub { color: var(--muted); }
+  .badge {
+    display: inline-block; background: var(--accent2); color: #fff;
+    padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; margin-top: 10px;
+  }
+  .meta {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0;
+  }
+  .metabox {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px;
+  }
+  .metabox .label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .metabox .value { font-size: 1.1rem; font-weight: 600; }
+  .items { display: grid; gap: 12px; margin-top: 8px; }
+  .item {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px;
+    display: flex; gap: 14px; align-items: center; justify-content: space-between;
+  }
+  .item .info { flex: 1; }
+  .item .info h3 { font-size: 1.1rem; color: var(--accent); margin-bottom: 4px; }
+  .item .info p { color: var(--muted); font-size: 0.9rem; }
+  .item .info .store { color: var(--accent2); text-decoration: none; font-size: 0.85rem; display: inline-block; }
+  .item .btn {
+    background: var(--accent); color: #fff; border: none; padding: 10px 18px;
+    border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem;
+  }
+  .item .btn.taken { background: var(--taken); cursor: not-allowed; opacity: 0.7; }
+  .empty {
+    text-align: center; color: var(--muted); padding: 32px 0;
+    border: 1px dashed var(--border); border-radius: 12px;
+  }
+  .empty h3 { color: var(--text); margin-bottom: 8px; }
+  .add-form {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-top: 16px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr 1fr auto; gap: 10px;
+  }
+  .add-form input, .add-form select {
+    background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 8px 10px; border-radius: 6px; font-size: 0.85rem;
+  }
+  .add-form input:focus, .add-form select:focus { outline: 2px solid var(--accent); }
+  .add-form .btn-primary { background: var(--accent); }
+  .actions { text-align: center; margin-top: 20px; }
+  .qr-wrap { text-align: center; margin: 24px 0; }
+  .qr-wrap img { max-width: 180px; }
+  .qr-wrap .label { color: var(--muted); margin-top: 8px; font-size: 0.85rem; }
+  .qr-wrap .copy-hint { color: var(--muted); font-size: 0.75rem; margin-top: 4px; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 32px; }
+  @media (max-width: 600px) {
+    .add-form { grid-template-columns: 1fr 1fr; }
+    .add-form .full { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="hero">
+    <h1>🎂 Mischka Minnielle</h1>
+    <div class="sub">Elle's 18th Birthday</div>
+    <span class="badge">Wishlist</span>
+  </header>
+
+  <div class="meta">
+    <div class="metabox">
+      <div class="label">Birthday Date</div>
+      <div class="value">December 18, 2026</div>
+    </div>
+    <div class="metabox">
+      <div class="label">Wishlist Open</div>
+      <div class="value">November 10, 2026</div>
+    </div>
+    <div class="metabox">
+      <div class="label">Wishlist Close</div>
+      <div class="value">December 10, 2026</div>
+    </div>
+    <div class="metabox">
+      <div class="label">Status</div>
+      <div class="value">Live &amp; Open</div>
+    </div>
+  </div>
+
+  <div class="qr-wrap" id="qrWrap">
+    <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=BASE_URL" alt="QR Code">
+    <div class="label">Scan to add to the wishlist</div>
+    <div class="copy-hint">(link copies to clipboard)</div>
+  </div>
+
+  <div id="items" class="items"></div>
+
+  <div class="add-form" id="addForm">
+    <input type="text" id="itemName" placeholder="Item name">
+    <input type="text" id="itemStore" placeholder="Store link">
+    <input type="number" id="itemPrice" placeholder="Price">
+    <select id="itemTaken">
+      <option value="false">Available</option>
+      <option value="true">Taken</option>
+    </select>
+    <button class="btn btn-primary" onclick="addItem()">Add Item</button>
+  </div>
+
+  <div class="add-form full" id="editForm" style="display:none;">
+    <input type="text" id="editName" placeholder="Item name">
+    <input type="text" id="editStore" placeholder="Store link">
+    <input type="number" id="editPrice" placeholder="Price">
+    <select id="editTaken">
+      <option value="false">Available</option>
+      <option value="true">Taken</option>
+    </select>
+    <button class="btn btn-primary" onclick="updateItem()">Save</button>
+    <button class="btn" style="background:transparent;color:var(--muted);" onclick="cancelEdit()">Cancel</button>
+  </div>
+
+  <div class="actions">
+    <button class="btn" onclick="resetAll()">Reset All Items</button>
+  </div>
+
+  <div class="footer">
+    Wishlist open Nov 10 – Dec 10, 2026 &nbsp;•&nbsp; Deliveries on Dec 18, 2026
+  </div>
+</div>
+
+<script>
+[
+  { name: "Strokes Soft Veil Foundation", store: "https://s.lazada.com.ph/s.Z70Pv0?c=v", price: "698", description: "Strokes brand liquid foundation", taken: false },
+  { name: "Strokes face flash", store: "https://s.lazada.com.ph/s.Z70PAw?c=s", price: "548", description: "Strokes brand face illuminator/highlighter", taken: false },
+  { name: "L'Oreal Concealer", store: "https://s.lazada.com.ph/s.Z701x3?c=w", price: "599", description: "L'Oreal brand concealer", taken: false },
+  { name: "Glam Hour blush", store: "https://s.lazada.com.ph/s.Z701ew?c=w", price: "599", description: "Glam Hour brand blush", taken: false },
+  { name: "NARS radiant creamy concealer", store: "https://s.lazada.com.ph/s.Z7DEYc?c=d", price: "1278", description: "NARS brand creamy concealer", taken: false },
+  { name: "laura mercier loose powder", store: "https://s.lazada.com.ph/s.Z7DwVs?c=d", price: "1207", description: "Laura Mercier brand loose setting powder", taken: false },
+  { name: "teviant fixing spray", store: "https://s.lazada.com.ph/s.Z7Dw6i?c=d", price: "895", description: "Teviant brand makeup setting/fixing spray", taken: false },
+  { name: "teviant blush stick", store: "https://s.lazada.com.ph/s.Z7DwRV?c=d", price: "795", description: "Teviant brand cream blush stick", taken: false },
+  { name: "absidy powder blush", store: "https://s.lazada.com.ph/s.Z7Dw9a?c=d", price: "395", description: "Absidy brand powder blush", taken: false },
+  { name: "benefit mooney birch blusher", store: "https://s.lazada.com.ph/s.Z7Dwme?c=d", price: "2150", description: "Benefit brand Mooney Birch blush/highlighter", taken: false },
+  { name: "judydoll palette", store: "https://s.lazada.com.ph/s.Z7Dwpa?c=d", price: "599", description: "Judydoll brand makeup palette (likely eyeshadow)", taken: false },
+  { name: "clinique cheek pop blush", store: "https://s.lazada.com.ph/s.Z7DwsU?c=d", price: "1170", description: "Clinique Cheek Pop line blush", taken: false },
+  { name: "lancome ultra wear foundation", store: "https://s.lazada.com.ph/s.Z7Dwwy?c=d", price: "2450", description: "Lancôme Ultra Wear long-wear liquid foundation", taken: false },
+  { name: "charlotte tilbury foundation", store: "https://s.lazada.com.ph/s.Z7DWCs?c=d", price: "2810", description: "Charlotte Tilbury brand foundation", taken: false },
+  { name: "charlotte tilbury concealer", store: "https://s.lazada.com.ph/s.Z7DDXJ?c=d", price: "1908", description: "Charlotte Tilbury brand concealer", taken: false },
+  { name: "nars liquid blush", store: "https://s.lazada.com.ph/s.Z7DDkK?c=d", price: "1180", description: "NARS brand liquid blush", taken: false },
+  { name: "teviant radiant primer", store: "https://s.lazada.com.ph/s.Z7DBZv?c=d", price: "975", description: "Teviant brand radiant makeup primer", taken: false },
+  { name: "teviant trio palette", store: "https://s.lazada.com.ph/s.Z7DBMy?c=d", price: "675", description: "Teviant brand 3-shade makeup palette", taken: false },
+];
+function load() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) items = JSON.parse(raw);
+  } catch(e) { items = []; }
+  if (!Array.isArray(items)) items = [];
+  if (items.length === 0) items = ITEMS_PRECHARD.map(i => ({...i}));
+  render();
+}
+const STORAGE_KEY = "bday_wishlist_v1";
+
+function load() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) items = JSON.parse(raw);
+  } catch(e) { items = []; }
+  if (!Array.isArray(items)) items = [];
+  render();
+}
+
+function save() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+}
+
+function render() {
+  const el = document.getElementById("items");
+  if (items.length === 0) {
+    el.innerHTML = `
+      <div class="empty">
+        <h3>No items yet</h3>
+        <p>Add a wishlist item below, or share the QR code with friends to start the list.</p>
+      </div>
+    `;
+  } else {
+    el.innerHTML = items.map((it, i) => {
+      const takenClass = it.taken ? 'taken' : '';
+      const takenLabel = it.taken ? 'Taken' : 'Commit';
+      return `
+        <div class="item">
+          <div class="info">
+            <h3>${escapeHtml(it.name)}</h3>
+            <p>$${it.price ? Number(it.price).toFixed(2) : '—'} &nbsp;·&nbsp; ${escapeHtml(it.description || '')}</p>
+            ${it.store ? `<a href="${escapeHtml(it.store)}" class="store" target="_blank" rel="noopener">${escapeHtml(it.store)}</a>` : ''}
+          </div>
+          <button class="btn ${takenClass}" onclick="toggleTaken(${i})">${takenLabel}</button>
+        </div>
+      `;
+    }).join('');
+  }
+  const url = window.location.href;
+  const qr = document.getElementById("qrCode");
+  qr.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(url);
+  document.getElementById("qrWrap").querySelector(".label").textContent = "Scan to open the wishlist — " + new Date().toLocaleDateString();
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function addItem() {
+  const name = document.getElementById("itemName").value.trim();
+  if (!name) return;
+  items.push({
+    name, store: document.getElementById("itemStore").value.trim(),
+    price: document.getElementById("itemPrice").value,
+    taken: document.getElementById("itemTaken").value === "true",
+    description: ""
+  });
+  save(); load();
+  document.getElementById("itemName").value = "";
+  document.getElementById("itemStore").value = "";
+  document.getElementById("itemPrice").value = "";
+}
+
+function toggleTaken(i) {
+  if (items[i].taken) { document.querySelectorAll(".item .btn")[i].textContent = "Taken"; return; }
+  items[i].taken = true;
+  save(); load();
+}
+
+function editItem(i) {
+  document.getElementById("editForm").style.display = "grid";
+  document.getElementById("editName").value = items[i].name;
+  document.getElementById("editStore").value = items[i].store;
+  document.getElementById("editPrice").value = items[i].price;
+  document.getElementById("editTaken").value = items[i].taken ? "true" : "false";
+  document.getElementById("editIndex").value = i;
+}
+
+function updateItem() {
+  const i = parseInt(document.getElementById("editIndex").value);
+  items[i].name = document.getElementById("editName").value.trim();
+  items[i].store = document.getElementById("editStore").value.trim();
+  items[i].price = document.getElementById("editPrice").value;
+  items[i].taken = document.getElementById("editTaken").value === "true";
+  save(); load();
+}
+
+function cancelEdit() {
+  document.getElementById("editForm").style.display = "none";
+}
+
+function resetAll() {
+  if (confirm("Reset all items to available? This cannot be undone.")) {
+    items = [];
+    save(); load();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", load);
+</script>
+</body>
+</html>
