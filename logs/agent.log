@@ -1,0 +1,728 @@
+2026-10-07 22:37:02,036 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-07 22:37:02,046 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-07 22:37:02,057 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-07 22:37:02,556 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-07 22:37:02,566 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-07 22:37:02,576 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-07 22:37:02,585 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-07 22:37:02,597 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-07 22:37:02,604 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-07 22:37:02,615 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-07 22:37:02,616 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-07 22:37:02,628 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-07 22:37:02,662 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-07 22:37:02,674 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-07 22:37:02,684 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-07 22:37:02,694 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-07 22:37:02,722 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-07 22:37:02,735 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-07 22:37:02,749 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-07 22:37:02,779 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-07 22:37:02,795 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-07 22:37:02,812 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-07 22:37:02,827 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-07 22:37:02,841 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-07 22:37:02,861 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-07 22:37:02,876 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-07 22:37:03,111 INFO hermes_cli.plugins: Plugin discovery complete: 58 found, 52 enabled
+2026-10-07 22:37:03,576 INFO run_agent: Loaded environment variables from C:\Users\Fourth\AppData\Local\hermes\profiles\bday-bot\.env
+2026-10-07 22:37:05,318 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-10-07 22:37:06,421 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=MainThread:8420 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:37:06,441 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:06,455 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:06,470 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:06,484 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:06,498 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:06,555 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:06,570 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:06,585 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:06,600 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:06,615 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:06,647 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:06,711 INFO tools.registry: check_fn <lambda> returned False; dependent tools will be unavailable this turn
+2026-10-07 22:37:07,185 INFO agent.auxiliary_client: Vision auto-detect: using main provider nous (google/gemini-3.6-flash)
+2026-10-07 22:37:07,731 INFO agent.model_metadata: Cached context length inclusionai/ling-3.0-flash-sante:free@https://inference-api.nousresearch.com/v1 -> 262,144 tokens
+2026-10-07 22:37:07,732 INFO tools.tool_search: tool_search activated (tier 1): 22 core/visible tools kept, 6 deferred (~5203 tokens), listing full (budget ~4000 tokens)
+2026-10-07 22:37:08,076 INFO [20261007_223701_645c15] agent.turn_context: conversation turn: session=20261007_223701_645c15 model=inclusionai/ling-3.0-flash-sante:free provider=nous platform=cli history=0 msg='Message from 🤖 orchestrator (@orchestrator): Hi — this is the orchestrator. Plea...'
+2026-10-07 22:37:10,114 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-24 (<lambda>):24992 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:37:11,040 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 86, 'alternates': ['qwen/qwen3.6-flash', 'qwen/qwen3-next-80b-a3b-instruct', 'z-ai/glm-5.3-flash']}
+Traceback (most recent call last):
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3364, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2335, in _with_stream_emitters
+    response = run()
+               ^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3365, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3341, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2887, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 297, in __init__
+    self._start_unmanaged(request)
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 303, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2878, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2810, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1204, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 86, 'alternates': ['qwen/qwen3.6-flash', 'qwen/qwen3-next-80b-a3b-instruct', 'z-ai/glm-5.3-flash']}
+2026-10-07 22:37:11,041 INFO run_agent: OpenAI client closed (stream_error_cleanup, shared=False, tcp_force_closed=0) thread=Thread-24 (<lambda>):24992 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:37:11,046 WARNING [20261007_223701_645c15] agent.conversation_loop: API call failed (attempt 1/3) error_type=RateLimitError thread=MainThread:8420 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free summary=HTTP 429: You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.
+2026-10-07 22:37:11,047 INFO [20261007_223701_645c15] agent.conversation_loop: Nous 429 looks like upstream capacity (no exhausted bucket in headers or last-known state) -- not tripping cross-session breaker.
+2026-10-07 22:37:11,047 WARNING [20261007_223701_645c15] agent.conversation_loop: Retrying API call in 86.0s (attempt 1/3) thread=MainThread:8420 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free policy=default error=Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 86, 'alternates': ['qwen/qwen3.6-flash', 'qwen/qwen3-next-80b-a3b-instruct', 'z-ai/glm-5.3-flash']}
+2026-10-07 22:38:37,232 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-25 (<lambda>):29804 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:38:37,787 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'status': 429, 'message': "The requested model is temporarily at capacity upstream. This is not your API key's rate limit — please retry shortly."}
+Traceback (most recent call last):
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3364, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2335, in _with_stream_emitters
+    response = run()
+               ^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3365, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3341, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2887, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 297, in __init__
+    self._start_unmanaged(request)
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 303, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2878, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2810, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1204, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'message': "The requested model is temporarily at capacity upstream. This is not your API key's rate limit — please retry shortly."}
+2026-10-07 22:38:37,788 INFO run_agent: OpenAI client closed (stream_error_cleanup, shared=False, tcp_force_closed=0) thread=Thread-25 (<lambda>):29804 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:38:37,799 WARNING [20261007_223701_645c15] agent.conversation_loop: API call failed (attempt 2/3) error_type=RateLimitError thread=MainThread:8420 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free summary=HTTP 429: The requested model is temporarily at capacity upstream. This is not your API key's rate limit — please retry shortly.
+2026-10-07 22:38:37,805 WARNING [20261007_223701_645c15] agent.conversation_loop: Retrying API call in 30.0s (attempt 2/3) thread=MainThread:8420 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free policy=default error=Error code: 429 - {'status': 429, 'message': "The requested model is temporarily at capacity upstream. This is not your API key's rate limit — please retry shortly."}
+2026-10-07 22:39:07,875 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-26 (<lambda>):6140 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:39:08,396 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 48, 'alternates': ['~google/gemini-pro-latest', 'qwen/qwen3-235b-a22b-thinking-2507', '~deepseek/deepseek-pro-latest']}
+Traceback (most recent call last):
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3364, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2335, in _with_stream_emitters
+    response = run()
+               ^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3365, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3341, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2887, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 297, in __init__
+    self._start_unmanaged(request)
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 303, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2878, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2810, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1204, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 48, 'alternates': ['~google/gemini-pro-latest', 'qwen/qwen3-235b-a22b-thinking-2507', '~deepseek/deepseek-pro-latest']}
+2026-10-07 22:39:08,396 INFO run_agent: OpenAI client closed (stream_error_cleanup, shared=False, tcp_force_closed=0) thread=Thread-26 (<lambda>):6140 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:39:08,430 INFO [20261007_223701_645c15] agent.credential_pool: credential pool: marking tom.paragas@yanoai.tech exhausted (status=429), rotating
+2026-10-07 22:39:08,435 INFO [20261007_223701_645c15] agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-10-07 22:39:08,436 WARNING [20261007_223701_645c15] agent.conversation_loop: API call failed (attempt 3/3) error_type=RateLimitError thread=MainThread:8420 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free summary=HTTP 429: You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.
+2026-10-07 22:39:08,436 INFO [20261007_223701_645c15] agent.conversation_loop: Nous 429 looks like upstream capacity (no exhausted bucket in headers or last-known state) -- not tripping cross-session breaker.
+2026-10-07 22:39:08,442 ERROR [20261007_223701_645c15] agent.conversation_loop: API call failed after 3 retries. HTTP 429: You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model. | provider=nous model=inclusionai/ling-3.0-flash-sante:free msgs=2 tokens=~4,198
+2026-10-07 22:39:08,548 INFO [20261007_223701_645c15] cli: CLI cleanup calling memory shutdown for session 20261007_223701_645c15 with 2 message(s)
+2026-10-07 22:39:11,180 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-07 22:39:11,194 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-07 22:39:11,211 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-07 22:39:11,601 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-07 22:39:11,610 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-07 22:39:11,618 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-07 22:39:11,626 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-07 22:39:11,635 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-07 22:39:11,645 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-07 22:39:11,654 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-07 22:39:11,656 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-07 22:39:11,672 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-07 22:39:11,709 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-07 22:39:11,722 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-07 22:39:11,732 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-07 22:39:11,743 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-07 22:39:11,766 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-07 22:39:11,779 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-07 22:39:11,792 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-07 22:39:11,820 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-07 22:39:11,832 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-07 22:39:11,843 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-07 22:39:11,855 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-07 22:39:11,874 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-07 22:39:11,893 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-07 22:39:11,910 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-07 22:39:12,076 INFO hermes_cli.plugins: Plugin discovery complete: 58 found, 52 enabled
+2026-10-07 22:39:12,537 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-10-07 22:39:12,578 INFO run_agent: Loaded environment variables from C:\Users\Fourth\AppData\Local\hermes\profiles\bday-bot\.env
+2026-10-07 22:39:13,556 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-10-07 22:39:13,620 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-10-07 22:39:14,963 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=MainThread:26376 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:39:14,988 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,004 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,022 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,037 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,053 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,125 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,141 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,157 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,175 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,193 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,222 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,305 INFO tools.registry: check_fn <lambda> returned False; dependent tools will be unavailable this turn
+2026-10-07 22:39:15,750 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-10-07 22:39:15,757 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-10-07 22:39:15,786 INFO agent.auxiliary_client: Vision auto-detect: using main provider nous (google/gemini-3.6-flash)
+2026-10-07 22:39:15,931 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-10-07 22:39:15,958 INFO tools.tool_search: tool_search activated (tier 1): 22 core/visible tools kept, 6 deferred (~5203 tokens), listing full (budget ~4000 tokens)
+2026-10-07 22:39:16,553 INFO [20261007_223701_645c15] agent.turn_context: conversation turn: session=20261007_223701_645c15 model=inclusionai/ling-3.0-flash-sante:free provider=nous platform=cli history=2 msg='Message from 🤖 orchestrator (@orchestrator): Hi — this is the orchestrator. Plea...'
+2026-10-07 22:39:16,845 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-14 (<lambda>):27024 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:39:18,069 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 38, 'alternates': ['qwen/qwen3.6-max-preview', 'qwen/qwen3-max-thinking', 'openai/gpt-5.2-pro']}
+Traceback (most recent call last):
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3364, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2335, in _with_stream_emitters
+    response = run()
+               ^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3365, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3341, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2887, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 297, in __init__
+    self._start_unmanaged(request)
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 303, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2878, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2810, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1204, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 38, 'alternates': ['qwen/qwen3.6-max-preview', 'qwen/qwen3-max-thinking', 'openai/gpt-5.2-pro']}
+2026-10-07 22:39:18,070 INFO run_agent: OpenAI client closed (stream_error_cleanup, shared=False, tcp_force_closed=0) thread=Thread-14 (<lambda>):27024 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:39:18,079 WARNING [20261007_223701_645c15] agent.conversation_loop: API call failed (attempt 1/3) error_type=RateLimitError thread=MainThread:26376 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free summary=HTTP 429: You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.
+2026-10-07 22:39:18,081 INFO [20261007_223701_645c15] agent.conversation_loop: Nous 429 looks like upstream capacity (no exhausted bucket in headers or last-known state) -- not tripping cross-session breaker.
+2026-10-07 22:39:18,084 WARNING [20261007_223701_645c15] agent.conversation_loop: Retrying API call in 38.0s (attempt 1/3) thread=MainThread:26376 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free policy=default error=Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 38, 'alternates': ['qwen/qwen3.6-max-preview', 'qwen/qwen3-max-thinking', 'openai/gpt-5.2-pro']}
+2026-10-07 22:39:56,173 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-15 (<lambda>):33108 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:39:58,730 INFO [20261007_223701_645c15] agent.conversation_loop: API call #1: model=inclusionai/ling-3.0-flash-sante:free provider=nous in=15148 out=58 total=15206 latency=42.0s id=gen-1791383996-T7ecE0P88bQFLrmnDgEy
+2026-10-07 22:39:58,756 INFO [20261007_223701_645c15] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=inclusionai/ling-3.0-flash-sante:free api_calls=1/500 budget=1/500 tool_turns=0 last_msg_role=assistant response_len=94 session=20261007_223701_645c15
+2026-10-07 22:39:58,803 INFO [20261007_223701_645c15] cli: CLI cleanup calling memory shutdown for session 20261007_223701_645c15 with 4 message(s)
+2026-10-07 22:46:18,990 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-07 22:46:19,005 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-07 22:46:19,015 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-07 22:46:19,341 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-07 22:46:19,354 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-07 22:46:19,369 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-07 22:46:19,380 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-07 22:46:19,390 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-07 22:46:19,402 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-07 22:46:19,414 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-07 22:46:19,416 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-07 22:46:19,429 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-07 22:46:19,464 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-07 22:46:19,473 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-07 22:46:19,483 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-07 22:46:19,495 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-07 22:46:19,533 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-07 22:46:19,545 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-07 22:46:19,557 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-07 22:46:19,583 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-07 22:46:19,605 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-07 22:46:19,630 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-07 22:46:19,650 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-07 22:46:19,666 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-07 22:46:19,681 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-07 22:46:19,694 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-07 22:46:19,834 INFO hermes_cli.plugins: Plugin discovery complete: 58 found, 52 enabled
+2026-10-07 22:46:21,661 INFO run_agent: Loaded environment variables from C:\Users\Fourth\AppData\Local\hermes\profiles\bday-bot\.env
+2026-10-07 22:46:22,468 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-10-07 22:46:23,778 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=MainThread:10132 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:46:23,805 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:23,820 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:23,839 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:23,855 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:23,870 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:23,946 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:23,965 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:23,983 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:24,003 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:24,021 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:24,054 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:24,131 INFO tools.registry: check_fn <lambda> returned False; dependent tools will be unavailable this turn
+2026-10-07 22:46:24,677 INFO agent.auxiliary_client: Vision auto-detect: using main provider nous (google/gemini-3.6-flash)
+2026-10-07 22:46:24,810 INFO tools.tool_search: tool_search activated (tier 1): 22 core/visible tools kept, 6 deferred (~5203 tokens), listing full (budget ~4000 tokens)
+2026-10-07 22:46:25,941 INFO [20261007_224620_05973b] agent.turn_context: conversation turn: session=20261007_224620_05973b model=inclusionai/ling-3.0-flash-sante:free provider=nous platform=cli history=0 msg='Confirm you are online and ready for birthday wishlist tasks.'
+2026-10-07 22:46:27,848 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-15 (<lambda>):33704 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:46:28,044 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider nous (inclusionai/ling-3.0-flash-sante:free)
+2026-10-07 22:46:28,048 INFO agent.auxiliary_client: Auxiliary title_generation: using nous (inclusionai/ling-3.0-flash-sante:free) at https://inference-api.nousresearch.com/v1/
+2026-10-07 22:46:29,495 ERROR agent.chat_completion_helpers: Streaming failed before delivery: Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 113, 'alternates': ['qwen/qwen3.8-27b', 'anthropic/claude-fable-5.1', 'sentence-transformers/paraphrase-minilm-l6-v2']}
+Traceback (most recent call last):
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3364, in _call
+    self.result["response"] = _with_stream_emitters(
+                              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2335, in _with_stream_emitters
+    response = run()
+               ^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3365, in <lambda>
+    self.agent, lambda: self._call_wire(stream_attempt_id))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 3341, in _call_wire
+    return self._call_chat_completions(stream_attempt_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2887, in _call_chat_completions
+    stream = self._set_managed_stream(relay_llm.stream(self.api_kwargs, _open_stream,
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 297, in __init__
+    self._start_unmanaged(request)
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\relay_llm.py", line 303, in _start_unmanaged
+    raw_stream = self._stream_factory(request)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2878, in _open_stream
+    return self._open_chat_stream({**next_api_kwargs, "stream": True, "timeout": timeout})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\agent\chat_completion_helpers.py", line 2810, in _open_chat_stream
+    return request_client.chat.completions.create(**stream_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1204, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 113, 'alternates': ['qwen/qwen3.8-27b', 'anthropic/claude-fable-5.1', 'sentence-transformers/paraphrase-minilm-l6-v2']}
+2026-10-07 22:46:29,498 INFO run_agent: OpenAI client closed (stream_error_cleanup, shared=False, tcp_force_closed=0) thread=Thread-15 (<lambda>):33704 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free
+2026-10-07 22:46:29,505 WARNING [20261007_224620_05973b] agent.conversation_loop: API call failed (attempt 1/3) error_type=RateLimitError thread=Thread-14 (_chat_run_agent):37324 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free summary=HTTP 429: You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.
+2026-10-07 22:46:29,508 INFO [20261007_224620_05973b] agent.conversation_loop: Nous 429 looks like upstream capacity (no exhausted bucket in headers or last-known state) -- not tripping cross-session breaker.
+2026-10-07 22:46:29,509 WARNING [20261007_224620_05973b] agent.conversation_loop: Retrying API call in 113.0s (attempt 1/3) thread=Thread-14 (_chat_run_agent):37324 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=inclusionai/ling-3.0-flash-sante:free policy=default error=Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 113, 'alternates': ['qwen/qwen3.8-27b', 'anthropic/claude-fable-5.1', 'sentence-transformers/paraphrase-minilm-l6-v2']}
+2026-10-07 22:46:29,525 INFO agent.credential_pool: credential pool: marking tom.paragas@yanoai.tech exhausted (status=429), rotating
+2026-10-07 22:46:29,530 INFO agent.credential_pool: credential pool: no available entries (all exhausted or empty)
+2026-10-07 22:46:29,532 INFO agent.auxiliary_client: Auxiliary title_generation: rate limit on auto (Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 113, 'alternates': ['sentence-transformers/all-minilm-l12-v2', 'qwen/qwen3.6-max-preview', 'moonshotai/kimi-k3']}), trying fallback
+2026-10-07 22:46:29,538 WARNING agent.auxiliary_client: Auxiliary title_generation: main provider nous is unavailable and no fallback_chain / fallback_providers is configured — refusing to guess another logged-in provider. Re-authenticate (`hermes model`) or declare a fallback.
+2026-10-07 22:46:29,539 WARNING agent.auxiliary_client: Auxiliary title_generation: rate limit on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising the primary error.
+2026-10-07 22:46:29,539 WARNING agent.title_generator: Title generation failed: Error code: 429 - {'status': 429, 'message': "You've reached this model's current fair-share rate limit. It adapts to demand — retry after the indicated delay, or try an alternate model.", 'reason': 'rate_limited', 'retry_after': 113, 'alternates': ['sentence-transformers/all-minilm-l12-v2', 'qwen/qwen3.6-max-preview', 'moonshotai/kimi-k3']}
+2026-10-07 23:09:00,506 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-07 23:09:00,518 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-07 23:09:00,528 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-07 23:09:01,192 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-07 23:09:01,198 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-07 23:09:01,206 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-07 23:09:01,212 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-07 23:09:01,217 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-07 23:09:01,224 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-07 23:09:01,231 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-07 23:09:01,233 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-07 23:09:01,241 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-07 23:09:01,309 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-07 23:09:01,316 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-07 23:09:01,323 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-07 23:09:01,335 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-07 23:09:01,356 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-07 23:09:01,367 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-07 23:09:01,377 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-07 23:09:01,396 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-07 23:09:01,406 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-07 23:09:01,417 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-07 23:09:01,425 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-07 23:09:01,434 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-07 23:09:01,442 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-07 23:09:01,453 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-07 23:09:01,635 INFO hermes_cli.plugins: Plugin discovery complete: 58 found, 52 enabled
+2026-10-07 23:09:03,044 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-07 23:09:03,310 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-07 23:09:03,388 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-07 23:09:06,656 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:62286
+2026-10-07 23:09:06,671 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-07 23:09:06,672 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-07 23:09:06,676 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-10-07 23:09:06,701 INFO cron.scheduler_provider: Multiplex cron scheduler started for 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot'] (re-enumerated every cycle)
+2026-10-07 23:09:06,783 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:56328
+2026-10-07 23:09:06,795 INFO tui_gateway.ws: ws closed peer=127.0.0.1:62286 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-07 23:10:00,672 INFO tui_gateway.ws: ws closed peer=127.0.0.1:56328 reason=client_disconnect(code=1005,reason=) messages=4 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 07:42:51,579 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-08 07:42:51,586 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-08 07:42:51,593 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-08 07:42:52,015 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-08 07:42:52,018 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-08 07:42:52,022 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-08 07:42:52,026 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-08 07:42:52,031 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-08 07:42:52,035 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-08 07:42:52,041 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-08 07:42:52,043 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-08 07:42:52,048 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-08 07:42:52,090 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-08 07:42:52,095 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-08 07:42:52,100 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-08 07:42:52,105 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-08 07:42:52,117 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-08 07:42:52,123 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-08 07:42:52,129 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-08 07:42:52,140 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-08 07:42:52,147 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-08 07:42:52,153 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-08 07:42:52,159 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-08 07:42:52,166 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-08 07:42:52,174 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-08 07:42:52,180 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-08 07:42:52,292 INFO hermes_cli.plugins: Plugin discovery complete: 58 found, 52 enabled
+2026-10-08 07:42:53,143 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-08 07:42:53,347 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-08 07:42:53,401 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-08 07:42:55,986 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-08 07:42:55,987 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-08 07:42:55,988 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-10-08 07:42:56,086 INFO cron.scheduler_provider: Multiplex cron scheduler started for 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot'] (re-enumerated every cycle)
+2026-10-08 07:42:56,155 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:57847
+2026-10-08 07:42:56,231 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:50392
+2026-10-08 07:42:56,242 INFO tui_gateway.ws: ws closed peer=127.0.0.1:57847 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 07:42:58,325 INFO tui_gateway.ws: ws closed peer=127.0.0.1:50392 reason=client_disconnect(code=1005,reason=) messages=1 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 15:03:10,934 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-08 15:03:10,946 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-08 15:03:10,958 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-08 15:03:11,580 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-08 15:03:11,586 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-08 15:03:11,592 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-08 15:03:11,597 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-08 15:03:11,607 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-08 15:03:11,615 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-08 15:03:11,622 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-08 15:03:11,623 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-08 15:03:11,631 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-08 15:03:11,694 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-08 15:03:11,700 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-08 15:03:11,707 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-08 15:03:11,715 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-08 15:03:11,732 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-08 15:03:11,743 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-08 15:03:11,754 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-08 15:03:11,772 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-08 15:03:11,782 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-08 15:03:11,792 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-08 15:03:11,802 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-08 15:03:11,811 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-08 15:03:11,821 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-08 15:03:11,832 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-08 15:03:12,003 INFO hermes_cli.plugins: Plugin discovery complete: 58 found, 52 enabled
+2026-10-08 15:03:13,188 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-08 15:03:13,780 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-08 15:03:13,928 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-08 15:03:19,206 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:52690
+2026-10-08 15:03:19,232 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-08 15:03:19,234 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-08 15:03:19,237 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-10-08 15:03:19,268 INFO cron.scheduler_provider: Multiplex cron scheduler started for 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot'] (re-enumerated every cycle)
+2026-10-08 15:03:19,991 INFO tui_gateway.ws: ws closed peer=127.0.0.1:52690 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 15:03:50,466 INFO agent.model_metadata: Cached context length upstage/solar-mini4:free@https://inference-api.nousresearch.com/v1 -> 524,288 tokens
+2026-10-08 20:14:40,044 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-08 20:14:40,056 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-08 20:14:40,065 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-08 20:14:40,653 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-08 20:14:40,657 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-08 20:14:40,662 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-08 20:14:40,666 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-08 20:14:40,672 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-08 20:14:40,678 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-08 20:14:40,683 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-08 20:14:40,685 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-08 20:14:40,691 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-08 20:14:40,744 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-08 20:14:40,749 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-08 20:14:40,755 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-08 20:14:40,761 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-08 20:14:40,772 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-08 20:14:40,780 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-08 20:14:40,787 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-08 20:14:40,802 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-08 20:14:40,810 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-08 20:14:40,820 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-08 20:14:40,828 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-08 20:14:40,836 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-08 20:14:40,843 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-08 20:14:40,851 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-08 20:14:40,995 INFO hermes_cli.plugins: Plugin discovery complete: 58 found, 52 enabled
+2026-10-08 20:14:41,884 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-08 20:14:42,079 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-08 20:14:42,125 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-08 20:14:44,946 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:52543
+2026-10-08 20:14:44,973 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-08 20:14:44,974 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-08 20:14:44,976 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-10-08 20:14:44,989 INFO cron.scheduler_provider: Multiplex cron scheduler started for 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot'] (re-enumerated every cycle)
+2026-10-08 20:14:45,056 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:61391
+2026-10-08 20:14:45,069 INFO tui_gateway.ws: ws closed peer=127.0.0.1:52543 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:14:50,964 INFO tui_gateway.ws: ws closed peer=127.0.0.1:61391 reason=client_disconnect(code=1005,reason=) messages=2 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:15:09,974 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-08 20:15:09,990 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-08 20:15:10,006 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-08 20:15:10,494 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-08 20:15:10,507 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-08 20:15:10,517 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-08 20:15:10,527 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-08 20:15:10,537 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-08 20:15:10,550 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-08 20:15:10,560 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-08 20:15:10,561 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-08 20:15:10,572 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-08 20:15:10,607 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-08 20:15:10,617 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-08 20:15:10,628 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-08 20:15:10,637 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-08 20:15:10,672 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-08 20:15:10,690 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-08 20:15:10,706 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-08 20:15:10,735 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-08 20:15:10,749 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-08 20:15:10,763 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-08 20:15:10,777 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-08 20:15:10,791 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-08 20:15:10,811 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-08 20:15:10,828 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-08 20:15:10,976 INFO hermes_cli.plugins: Plugin discovery complete: 58 found, 52 enabled
+2026-10-08 20:15:11,514 INFO run_agent: Loaded environment variables from C:\Users\Fourth\AppData\Local\hermes\profiles\bday-bot\.env
+2026-10-08 20:15:12,689 WARNING cli: Background MCP discovery previously exited with no connected servers; retrying discovery thread
+2026-10-08 20:15:14,195 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=MainThread:10324 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=upstage/solar-mini4:free
+2026-10-08 20:15:14,222 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:15:14,241 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-10-08 20:15:14,261 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:15:14,281 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:15:14,302 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-10-08 20:15:14,358 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:15:14,383 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:15:14,407 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:15:14,428 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:15:14,453 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:15:14,506 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:15:14,651 INFO agent.auxiliary_client: Vision auto-detect: using main provider nous (google/gemini-3.6-flash)
+2026-10-08 20:15:14,778 INFO tools.tool_search: tool_search activated (tier 1): 23 core/visible tools kept, 6 deferred (~5140 tokens), listing full (budget ~4000 tokens)
+2026-10-08 20:15:16,356 INFO [20261007_223701_645c15] agent.turn_context: conversation turn: session=20261007_223701_645c15 model=upstage/solar-mini4:free provider=nous platform=cli history=4 msg='Message from 🤖 jarvis (@jarvis): Here is the birthday wishlist idea.  The celebr...'
+2026-10-08 20:15:16,361 INFO [20261007_223701_645c15] agent.conversation_loop: Stored system prompt for session 20261007_223701_645c15 has stale runtime identity; rebuilding for model=upstage/solar-mini4:free provider=nous.
+2026-10-08 20:15:18,103 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-14 (<lambda>):6468 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=upstage/solar-mini4:free
+2026-10-08 20:15:29,702 INFO [20261007_223701_645c15] agent.conversation_loop: API call #1: model=upstage/solar-mini4:free provider=nous in=15284 out=539 total=15823 latency=11.7s cache=1600/15284 (10%) id=gen-1791461719-uapwiNv6LBHl5et7ApBE
+2026-10-08 20:15:29,945 INFO [20261007_223701_645c15] agent.tool_executor: tool skill_view completed (0.20s, 15539 chars)
+2026-10-08 20:15:36,154 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:54725
+2026-10-08 20:15:37,367 INFO tui_gateway.ws: ws closed peer=127.0.0.1:54725 reason=client_disconnect(code=1005,reason=) messages=1 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:15:47,568 INFO [20261007_223701_645c15] agent.conversation_loop: API call #2: model=upstage/solar-mini4:free provider=nous in=19867 out=903 total=20770 latency=17.6s cache=1600/19867 (8%) id=gen-1791461731-7w366yaV3zE4MnCQmpcD
+2026-10-08 20:15:47,592 INFO [20261007_223701_645c15] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=upstage/solar-mini4:free api_calls=2/500 budget=2/500 tool_turns=1 last_msg_role=assistant response_len=1331 session=20261007_223701_645c15
+2026-10-08 20:15:47,646 INFO [20261007_223701_645c15] cli: CLI cleanup calling memory shutdown for session 20261007_223701_645c15 with 8 message(s)
+2026-10-08 20:27:10,465 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-08 20:27:10,474 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-08 20:27:10,483 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-08 20:27:10,920 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-08 20:27:10,924 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-08 20:27:10,929 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-08 20:27:10,934 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-08 20:27:10,937 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-08 20:27:10,942 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-08 20:27:10,947 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-08 20:27:10,947 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-08 20:27:10,954 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-08 20:27:11,003 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-08 20:27:11,007 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-08 20:27:11,013 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-08 20:27:11,018 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-08 20:27:11,030 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-08 20:27:11,040 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-08 20:27:11,049 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-08 20:27:11,064 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-08 20:27:11,070 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-08 20:27:11,077 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-08 20:27:11,083 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-08 20:27:11,090 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-08 20:27:11,097 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-08 20:27:11,105 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-08 20:27:11,236 INFO hermes_cli.plugins: Plugin discovery complete: 58 found, 52 enabled
+2026-10-08 20:27:12,109 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-08 20:27:12,286 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-08 20:27:12,344 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-08 20:27:15,219 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-08 20:27:15,219 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-08 20:27:15,220 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-10-08 20:27:15,312 INFO cron.scheduler_provider: Multiplex cron scheduler started for 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot'] (re-enumerated every cycle)
+2026-10-08 20:27:15,379 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:61307
+2026-10-08 20:27:15,484 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:54022
+2026-10-08 20:27:15,498 INFO tui_gateway.ws: ws closed peer=127.0.0.1:61307 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:27:15,639 INFO tui_gateway.ws: ws closed peer=127.0.0.1:54022 reason=client_disconnect(code=1005,reason=) messages=3 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:27:15,816 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:61307
+2026-10-08 20:27:16,874 INFO run_agent: Loaded environment variables from C:\Users\Fourth\AppData\Local\hermes\profiles\bday-bot\.env
+2026-10-08 20:27:21,279 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=Thread-17 (_build):19588 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=upstage/solar-mini4:free
+2026-10-08 20:27:21,314 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:21,350 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:21,385 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:21,421 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:21,455 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:21,553 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:21,587 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:21,628 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:21,666 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:21,704 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:21,768 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:21,897 INFO tools.registry: check_fn check_react_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 20:27:22,015 INFO agent.auxiliary_client: Vision auto-detect: using main provider nous (google/gemini-3.6-flash)
+2026-10-08 20:27:22,165 INFO tools.tool_search: tool_search activated (tier 1): 23 core/visible tools kept, 17 deferred (~7726 tokens), listing full (budget ~4000 tokens)
+2026-10-08 20:27:57,578 INFO tui_gateway.ws: ws closed peer=127.0.0.1:61307 reason=client_disconnect(code=1005,reason=) messages=21 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
+2026-10-08 20:28:17,613 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=Thread-34:14992 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=upstage/solar-mini4:free
+2026-10-08 20:29:32,757 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:49169
+2026-10-08 20:38:29,155 INFO tui_gateway.ws: ws closed peer=127.0.0.1:49169 reason=client_disconnect(code=1005,reason=) messages=36 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:41:46,269 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:51403
+2026-10-08 20:41:58,928 INFO tui_gateway.ws: ws closed peer=127.0.0.1:51403 reason=client_disconnect(code=1005,reason=) messages=1 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 21:27:23,361 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-10-08 21:27:23,369 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-10-08 21:27:23,377 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-10-08 21:27:23,852 INFO hermes_cli.plugins: Plugin 'deepinfra' registered image_gen provider: deepinfra
+2026-10-08 21:27:23,856 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-10-08 21:27:23,860 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-10-08 21:27:23,865 INFO hermes_cli.plugins: Plugin 'meta-ai-image-gen' registered image_gen provider: meta-ai
+2026-10-08 21:27:23,869 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-10-08 21:27:23,874 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-10-08 21:27:23,879 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-10-08 21:27:23,880 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-10-08 21:27:23,887 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-10-08 21:27:23,933 INFO hermes_cli.plugins: Plugin 'deepinfra' registered video_gen provider: deepinfra
+2026-10-08 21:27:23,937 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-10-08 21:27:23,941 INFO hermes_cli.plugins: Plugin 'openrouter' registered video_gen provider: openrouter
+2026-10-08 21:27:23,947 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-10-08 21:27:23,962 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-10-08 21:27:23,968 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-10-08 21:27:23,976 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-10-08 21:27:23,993 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-10-08 21:27:23,999 INFO hermes_cli.plugins: Plugin 'web-keenable' registered web provider: keenable
+2026-10-08 21:27:24,006 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-10-08 21:27:24,014 INFO hermes_cli.plugins: Plugin 'web-perplexity' registered web provider: perplexity
+2026-10-08 21:27:24,022 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-10-08 21:27:24,029 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-10-08 21:27:24,036 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-10-08 21:27:24,165 INFO hermes_cli.plugins: Plugin discovery complete: 58 found, 52 enabled
+2026-10-08 21:27:25,031 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-08 21:27:25,209 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-08 21:27:25,251 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-08 21:27:28,056 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-08 21:27:28,057 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-08 21:27:28,058 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-10-08 21:27:28,068 INFO cron.scheduler_provider: Multiplex cron scheduler started for 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot'] (re-enumerated every cycle)
+2026-10-08 21:27:28,104 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:55261
+2026-10-08 21:27:28,224 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:60521
+2026-10-08 21:27:28,238 INFO tui_gateway.ws: ws closed peer=127.0.0.1:55261 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 21:27:28,382 INFO tui_gateway.ws: ws closed peer=127.0.0.1:60521 reason=client_disconnect(code=1005,reason=) messages=2 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 21:27:28,707 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:54862
+2026-10-08 21:27:29,582 INFO run_agent: Loaded environment variables from C:\Users\Fourth\AppData\Local\hermes\profiles\bday-bot\.env
+2026-10-08 21:27:30,909 WARNING hermes_cli.auth: auth: could not read C:\Users\Fourth\AppData\Local\hermes\profiles\bday-bot\auth.json, leaving the store on disk untouched rather than degrading to an empty one
+Traceback (most recent call last):
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 591, in _load_auth_store
+    raw = json.loads(auth_file.read_text(encoding="utf-8-sig"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\.hermes-runtime\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\.hermes-runtime\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Fourth\\AppData\\Local\\hermes\\profiles\\bday-bot\\auth.json'
+2026-10-08 21:27:30,909 WARNING hermes_cli.auth: auth: could not read C:\Users\Fourth\AppData\Local\hermes\profiles\bday-bot\auth.json, leaving the store on disk untouched rather than degrading to an empty one
+Traceback (most recent call last):
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\hermes_cli\auth.py", line 591, in _load_auth_store
+    raw = json.loads(auth_file.read_text(encoding="utf-8-sig"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\.hermes-runtime\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Fourth\AppData\Local\hermes\hermes-agent\.hermes-runtime\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Fourth\\AppData\\Local\\hermes\\profiles\\bday-bot\\auth.json'
+2026-10-08 21:27:33,184 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=Thread-17 (_build):36988 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=upstage/solar-mini4:free
+2026-10-08 21:27:33,231 INFO tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,266 INFO tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,308 INFO tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,343 INFO tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,380 INFO tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,503 INFO tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,538 INFO tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,576 INFO tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,620 INFO tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,659 INFO tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,726 INFO tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,862 INFO tools.registry: check_fn check_react_requirements returned False; dependent tools will be unavailable this turn
+2026-10-08 21:27:33,952 INFO agent.auxiliary_client: Vision auto-detect: using main provider nous (google/gemini-3.6-flash)
+2026-10-08 21:27:34,104 INFO tools.tool_search: tool_search activated (tier 1): 23 core/visible tools kept, 17 deferred (~7726 tokens), listing full (budget ~4000 tokens)
+2026-10-08 21:27:40,919 INFO tui_gateway.ws: ws closed peer=127.0.0.1:54862 reason=client_disconnect(code=1005,reason=) messages=12 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
+2026-10-08 21:28:00,962 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=Thread-34:27096 provider=nous base_url=https://inference-api.nousresearch.com/v1 model=upstage/solar-mini4:free
+2026-10-08 21:29:07,867 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:54896
+2026-10-08 21:29:31,835 INFO tui_gateway.ws: ws closed peer=127.0.0.1:54896 reason=client_disconnect(code=1005,reason=) messages=2 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0

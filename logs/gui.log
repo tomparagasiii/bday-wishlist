@@ -1,0 +1,64 @@
+2026-10-07 23:09:03,044 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-07 23:09:03,310 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-07 23:09:03,388 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-07 23:09:06,656 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:62286
+2026-10-07 23:09:06,671 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-07 23:09:06,672 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-07 23:09:06,783 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:56328
+2026-10-07 23:09:06,795 INFO tui_gateway.ws: ws closed peer=127.0.0.1:62286 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-07 23:10:00,672 INFO tui_gateway.ws: ws closed peer=127.0.0.1:56328 reason=client_disconnect(code=1005,reason=) messages=4 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 07:42:53,143 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-08 07:42:53,347 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-08 07:42:53,401 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-08 07:42:55,986 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-08 07:42:55,987 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-08 07:42:56,155 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:57847
+2026-10-08 07:42:56,231 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:50392
+2026-10-08 07:42:56,242 INFO tui_gateway.ws: ws closed peer=127.0.0.1:57847 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 07:42:58,325 INFO tui_gateway.ws: ws closed peer=127.0.0.1:50392 reason=client_disconnect(code=1005,reason=) messages=1 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 15:03:13,188 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-08 15:03:13,780 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-08 15:03:13,928 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-08 15:03:19,206 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:52690
+2026-10-08 15:03:19,232 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-08 15:03:19,234 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-08 15:03:19,991 INFO tui_gateway.ws: ws closed peer=127.0.0.1:52690 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:14:41,884 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-08 20:14:42,079 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-08 20:14:42,125 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-08 20:14:44,946 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:52543
+2026-10-08 20:14:44,973 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-08 20:14:44,974 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-08 20:14:45,056 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:61391
+2026-10-08 20:14:45,069 INFO tui_gateway.ws: ws closed peer=127.0.0.1:52543 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:14:50,964 INFO tui_gateway.ws: ws closed peer=127.0.0.1:61391 reason=client_disconnect(code=1005,reason=) messages=2 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:15:36,154 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:54725
+2026-10-08 20:15:37,367 INFO tui_gateway.ws: ws closed peer=127.0.0.1:54725 reason=client_disconnect(code=1005,reason=) messages=1 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:27:12,109 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-08 20:27:12,286 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-08 20:27:12,344 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-08 20:27:15,219 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-08 20:27:15,219 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-08 20:27:15,379 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:61307
+2026-10-08 20:27:15,484 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:54022
+2026-10-08 20:27:15,498 INFO tui_gateway.ws: ws closed peer=127.0.0.1:61307 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:27:15,639 INFO tui_gateway.ws: ws closed peer=127.0.0.1:54022 reason=client_disconnect(code=1005,reason=) messages=3 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:27:15,816 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:61307
+2026-10-08 20:27:57,578 INFO tui_gateway.ws: ws closed peer=127.0.0.1:61307 reason=client_disconnect(code=1005,reason=) messages=21 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
+2026-10-08 20:29:32,757 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:49169
+2026-10-08 20:38:29,155 INFO tui_gateway.ws: ws closed peer=127.0.0.1:49169 reason=client_disconnect(code=1005,reason=) messages=36 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 20:41:46,269 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:51403
+2026-10-08 20:41:58,928 INFO tui_gateway.ws: ws closed peer=127.0.0.1:51403 reason=client_disconnect(code=1005,reason=) messages=1 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 21:27:25,031 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-10-08 21:27:25,209 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-10-08 21:27:25,251 INFO hermes_cli.web_server: Desktop-owned loopback backend: dashboard.public_url does not engage the ticket gate for this process; the public deployment keeps its own gate.
+2026-10-08 21:27:28,056 INFO hermes_cli.web_server: Desktop cron scheduler will tick 12 profile(s): ['default', 'assignment-bot', 'bday-bot', 'doc-mak', 'fourth-s-bot', 'jarvis', 'orchestrator', 'price-quote-bot', 'prof-reader', 'researcher-bot', 'sales-bot', 'tomas-superr-hot-bot']
+2026-10-08 21:27:28,057 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-10-08 21:27:28,104 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:55261
+2026-10-08 21:27:28,224 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:60521
+2026-10-08 21:27:28,238 INFO tui_gateway.ws: ws closed peer=127.0.0.1:55261 reason=client_disconnect(code=1005,reason=) messages=0 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 21:27:28,382 INFO tui_gateway.ws: ws closed peer=127.0.0.1:60521 reason=client_disconnect(code=1005,reason=) messages=2 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
+2026-10-08 21:27:28,707 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:54862
+2026-10-08 21:27:40,919 INFO tui_gateway.ws: ws closed peer=127.0.0.1:54862 reason=client_disconnect(code=1005,reason=) messages=12 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
+2026-10-08 21:29:07,867 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:54896
+2026-10-08 21:29:31,835 INFO tui_gateway.ws: ws closed peer=127.0.0.1:54896 reason=client_disconnect(code=1005,reason=) messages=2 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=0
