@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wishlist — Mischka Minnielle</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background-image: url('composer-images/bg_ea68d5.png');
+    background-color: rgba(103, 6, 38, 0.5);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000;
+    padding: 24px;
+    line-height: 1.6;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+  header.hero {
+    text-align: center;
+    padding: 32px 0 24px;
+    border-bottom: 2px solid #E8B7C2;
+  }
+  header.hero h1 {
+    font-family: 'Segoe Script', 'Brush Script MT', 'Lucida Handwriting', cursive;
+    font-size: 2.4rem;
+    color: #670626;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  header.hero .sub {
+    color: #E8B7C2;
+    opacity: 0.9;
+    font-size: 1.1rem;
+  }
+  .badge {
+    display: inline-block;
+    background: #E8B7C2;
+    color: #670626;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 12px;
+  }
+  .meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .metabox {
+    background: #fff;
+    border: 2px solid #E8B7C2;
+    border-radius: 12px;
+    padding: 14px;
+  }
+  .metabox .label {
+    font-size: 0.75rem;
+    color: #670626;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .metabox .value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  }
+  .items { display: grid; gap: 12px; margin-top: 8px; }
+  .item {
+    background: #fff;
+    border: 2px solid #E8B7C2;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .item .info { flex: 1; }
+  .item .info .name {
+    font-family: 'Segoe Script', 'Brush Script MT', 'Lucida Handwriting', cursive;
+    font-size: 1.2rem;
+    color: #670626;
+    margin-bottom: 6px;
+  }
+  .item .info .details {
+    font-size: 0.9rem;
+    color: #670626;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    margin-bottom: 6px;
+  }
+  .item .info .store {
+    color: #670626;
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: inline-block;
+    word-break: break-all;
+    margin-top: 6px;
+    font-family: 'Consolas', 'Courier New', monospace;
+  }
+  .item .image {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #E8B7C2;
+    background: #F8F5F5;
+  }
+  .actions { display: flex; gap: 6px; }
+  .btn {
+    background: #670626;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  }
+  .btn.taken {
+    background: #E8B7C2;
+    color: #670626;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  .empty {
+    text-align: center;
+    color: #670626;
+    padding: 32px 0;
+    border: 2px dashed #E8B7C2;
+    border-radius: 12px;
+  }
+  .add-form {
+    background: #fff;
+    border: 2px solid #E8B7C2;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr auto;
+    gap: 10px;
+  }
+  .add-form input, .add-form select {
+    background: #F8F5F5;
+    border: 2px solid #E8B7C2;
+    color: #670626;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  }
+  .add-form input:focus, .add-form select:focus { outline: 2px solid #670626; }
+  .btn-primary { background: #670626; }
+  .actions { text-align: center; margin-top: 20px; }
+  .footer { text-align: center; color: #670626; font-size: 0.8rem; margin-top: 32px; }
+  @media (max-width: 600px) {
+    .add-form { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="hero">
+    <h1>Mischka Minnielle</h1>
+    <div class="sub">Elle's 18th Birthday</div>
+    <span class="badge">Wishlist</span>
+  </header>
+
+  <div class="meta">
+    <div class="metabox">
+      <div class="label">Birthday Date</div>
+      <div class="value">December 18, 2026</div>
+    </div>
+    <div class="metabox">
+      <div class="label">Wishlist Open</div>
+      <div class="value">November 10, 2026</div>
+    </div>
+    <div class="metabox">
+      <div class="label">Wishlist Close</div>
+      <div class="value">December 10, 2026</div>
+    </div>
+    <div class="metabox">
+      <div class="label">Status</div>
+      <div class="value">Live &amp; Open</div>
+    </div>
+  </div>
+
+  <div class="items">
+    <div class="item">
+      <div class="image" style="background-image: url('images/01_Strokes_Veil.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Strokes Soft Veil Foundation</div>
+        <div class="details">P698.00 &nbsp;·&nbsp; Shade: fair warm</div>
+        <a href="https://s.lazada.com.ph/s.Z70Pv0?c=v" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/02_Strokes_Flash.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Strokes face flash</div>
+        <div class="details">P548.00 &nbsp;·&nbsp; Shade: Glass Glow</div>
+        <a href="https://s.lazada.com.ph/s.Z70PAw?c=s" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/03_L_Oreal.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">L'Oreal Concealer</div>
+        <div class="details">P699.00 &nbsp;·&nbsp; Shade: ivory</div>
+        <a href="https://s.lazada.com.ph/s.Z70lX3?c=w" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/04_Glam Hour.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Glam Hour blush</div>
+        <div class="details">P599.00 &nbsp;·&nbsp; Shade: Frida</div>
+        <a href="https://s.lazada.com.ph/s.Z70lew?c=w" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/05_Nars.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Nars radiant creamy concealer</div>
+        <div class="details">P1,827.00 &nbsp;·&nbsp; Shade: vanilla</div>
+        <a href="https://s.lazada.com.ph/s.Z7DEyC?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/06_Laura.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Laura Mercier loose powder</div>
+        <div class="details">P1,207.00</div>
+        <a href="https://s.lazada.com.ph/s.Z7DwVs?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/07_Teviant.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Teviant fixing spray</div>
+        <div class="details">P895.00</div>
+        <a href="https://s.lazada.com.ph/s.Z7Dw6i?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/08_Teviant.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Teviant blush stick</div>
+        <div class="details">P795.00 &nbsp;·&nbsp; Shade: chillout</div>
+        <a href="https://s.lazada.com.ph/s.Z7DwRV?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/09_Absidy.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Absidy powder blush</div>
+        <div class="details">P395.00 &nbsp;·&nbsp; Shade: peony</div>
+        <a href="https://s.lazada.com.ph/s.Z7Dw9a?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/10_Benefit.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Benefit Moone rich berry blush</div>
+        <div class="details">P2,150.00</div>
+        <a href="https://s.lazada.com.ph/s.Z7Dwme?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/11_Judydoll.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Judydoll palette</div>
+        <div class="details">P599.00 &nbsp;·&nbsp; Shade: 02</div>
+        <a href="https://s.lazada.com.ph/s.Z7Dwpa?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/12_Clinique.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Clinique cheek pop blush</div>
+        <div class="details">P1,170.00 &nbsp;·&nbsp; Shade: #15</div>
+        <a href="https://s.lazada.com.ph/s.Z7DwsU?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/13_Lancome.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Lancome ultra wear foundation</div>
+        <div class="details">P2,450.00 &nbsp;·&nbsp; Shade: PO-01</div>
+        <a href="https://s.lazada.com.ph/s.Z7Dwwy?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/14_Charlotte.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Charlotte tilbury foundation</div>
+        <div class="details">P2,810.00</div>
+        <a href="https://s.lazada.com.ph/s.Z7DwCs?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/15_Charlotte.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Charlotte tilbury concealer</div>
+        <div class="details">P1,908.00</div>
+        <a href="https://s.lazada.com.ph/s.Z7DDXJ?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/16_Nars.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Nars liquid blush</div>
+        <div class="details">P1,180.00</div>
+        <a href="https://s.lazada.com.ph/s.Z7DDkK?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/17_Teviant.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Teviant radiant primer</div>
+        <div class="details">P975.00</div>
+        <a href="https://s.lazada.com.ph/s.Z7DBZv?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image" style="background-image: url('images/18_Teviant.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="info">
+        <div class="name">Teviant trio palette</div>
+        <div class="details">P675.00 &nbsp;·&nbsp; Shade: love letter</div>
+        <a href="https://s.lazada.com.ph/s.Z7DBMy?c=d" class="store" target="_blank" rel="noopener">View on Lazada</a>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="commitItem(this)">Commit</button>
+        <button class="btn">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="add-form">
+    <input type="text" id="itemName" placeholder="Item name">
+    <input type="text" id="itemStore" placeholder="Store link">
+    <input type="number" id="itemPrice" placeholder="Price">
+    <select id="itemTaken">
+      <option value="false">Available</option>
+      <option value="true">Taken</option>
+    </select>
+    <button class="btn btn-primary" onclick="addItem()">Add Item</button>
+    <button class="btn" onclick="resetAll()">Reset All</button>
+  </div>
+
+  <div class="footer">
+    Wishlist open Nov 10 – Dec 10, 2026 &nbsp;•&nbsp; Deliveries on Dec 18, 2026
+  </div>
+</div>
+
+<script>
+function commitItem(button) {
+  const item = button.closest('.item');
+  const name = item.querySelector('.name').textContent;
+  
+  // Check if item is already committed
+  const actions = item.querySelector('.actions');
+  if (actions.querySelector('.btn.taken')) {
+    return;
+  }
+  
+  // Mark as taken
+  button.classList.add('taken');
+  button.textContent = '✓ Taken';
+  
+  // Disable the item info links
+  const info = item.querySelector('.info');
+  const links = info.querySelectorAll('a');
+  links.forEach(link => {
+    link.style.pointerEvents = 'none';
+    link.style.opacity = '0.5';
+  });
+  
+  // Show thank you message
+  const thankYouMessage = "With a Grateful Heart 💖\n\nThank you so much for your generosity and for choosing a gift from my wishlist! It means so much to me that you took the time to choose something I truly dreamed of having.\n\nYour thoughtfulness and kindness have made my 18th birthday even more special and memorable. More than the gift itself, I will always appreciate the love and generosity behind it.\n\nThank you for being part of my dreams and for making this beautiful milestone in my life even more meaningful. I feel truly blessed to have you as part of my debut celebration.\n\nWith love and heartfelt gratitude,\n\nMischka";
+  alert(thankYouMessage);
+}
+function resetAll() {
+  // Reset all items
+  const items = document.querySelectorAll('.item');
+  items.forEach(item => {
+    // Reset commit buttons
+    const buttons = item.querySelectorAll('.actions .btn');
+    const commitBtn = buttons[0];
+    if (commitBtn.textContent === '✓ Taken') {
+      commitBtn.textContent = 'Commit';
+      commitBtn.classList.remove('taken');
+    }
+    
+    // Re-enable links
+    const info = item.querySelector('.info');
+    const links = info.querySelectorAll('a');
+    links.forEach(link => {
+      link.style.pointerEvents = 'auto';
+      link.style.opacity = '1';
+    });
+  });
+}
+</script>
+</body>
+</html>
