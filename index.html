@@ -8,7 +8,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    background-image: url('C:/Users/Fourth/AppData/Roaming/Hermes/composer-images/bg_ea68d5.png');
+    background-image: url('images/bg_ea68d5.png');
     background-color: rgba(103, 6, 38, 0.5);
     background-size: cover;
     background-position: center;
@@ -60,10 +60,12 @@
 </head>
 <body>
 <div class="container">
+  <div class="qr-wrap">
+    <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/wishlist.html" alt="QR Code">
+    <div class="label">Scan to open the wishlist</div>
+  </div>
+
   <div class="logo"></div>
-  <h1>Mischka Minnielle</h1>
-  <div class="sub">Elle's 18th Birthday</div>
-  <span class="badge">Wishlist</span>
 
   <div class="meta" style="margin-top: 12px;">
     <div class="metabox">
@@ -74,24 +76,19 @@
     </div>
   </div>
 
-  <div class="qr-wrap">
-    <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/wishlist.html" alt="QR Code">
-    <div class="label">Scan to open the wishlist</div>
-  </div>
-
   <div class="footer">
     Wishlist open Nov 10 – Dec 10, 2026<br>
     Deliveries on Dec 18, 2026
   </div>
 
   <div class="message">
-    <p style="font-family: 'Segoe Script', 'Brush Script MT', cursive; font-size: 1.2rem; color: #670626; text-align: center; margin-top: 30px;">
+    <p style="font-family: Georgia, 'Times New Roman', serif; font-size: 1.2rem; color: #670626; text-align: center; margin-top: 30px;">
       See you at my 18th birthday soirée. Your presence will make this special day even more meaningful.✨
     </p>
-    <p style="font-family: 'Segoe Script', 'Brush Script MT', cursive; font-size: 1.2rem; color: #670626; text-align: center; margin-top: 10px;">
+    <p style="font-family: Georgia, 'Times New Roman', serif; font-size: 1.2rem; color: #670626; text-align: center; margin-top: 10px;">
       With love and heartfelt gratitude,
     </p>
-    <p style="font-family: 'Segoe Script', 'Brush Script MT', cursive; font-size: 1.4rem; color: #670626; text-align: center; margin-top: 10px;">
+    <p style="font-family: Georgia, 'Times New Roman', serif; font-size: 1.4rem; color: #670626; text-align: center; margin-top: 10px;">
       Mischka
     </p>
     <p style="font-size: 1rem; color: #670626; text-align: center; margin-top: 5px;">
