@@ -138,32 +138,9 @@
     border: 2px dashed #E8B7C2;
     border-radius: 12px;
   }
-  .add-form {
-    background: #fff;
-    border: 2px solid #E8B7C2;
-    border-radius: 12px;
-    padding: 16px;
-    margin-top: 16px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr auto;
-    gap: 10px;
-  }
-  .add-form input, .add-form select {
-    background: #F8F5F5;
-    border: 2px solid #E8B7C2;
-    color: #670626;
-    padding: 8px 10px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  }
-  .add-form input:focus, .add-form select:focus { outline: 2px solid #670626; }
   .btn-primary { background: #670626; }
   .actions { text-align: center; margin-top: 20px; }
   .footer { text-align: center; color: #670626; font-size: 0.8rem; margin-top: 32px; }
-  @media (max-width: 600px) {
-    .add-form { grid-template-columns: 1fr 1fr; }
-  }
 </style>
 </head>
 <body>
@@ -414,17 +391,6 @@
     </div>
   </div>
 
-  <div class="add-form">
-    <input type="text" id="itemName" placeholder="Item name">
-    <input type="text" id="itemStore" placeholder="Store link">
-    <input type="number" id="itemPrice" placeholder="Price">
-    <select id="itemTaken">
-      <option value="false">Available</option>
-      <option value="true">Taken</option>
-    </select>
-    <button class="btn btn-primary" onclick="addItem()">Add Item</button>
-    <button class="btn" onclick="resetAll()">Reset All</button>
-  </div>
 
   <div class="footer">
     Wishlist open Nov 10 – Dec 10, 2026 &nbsp;•&nbsp; Deliveries on Dec 18, 2026
