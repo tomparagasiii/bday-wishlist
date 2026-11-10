@@ -398,51 +398,171 @@
 </div>
 
 <script>
-function commitItem(button) {
-  const item = button.closest('.item');
-  const name = item.querySelector('.name').textContent;
-  
-  // Check if item is already committed
-  const actions = item.querySelector('.actions');
-  if (actions.querySelector('.btn.taken')) {
-    return;
-  }
-  
-  // Mark as taken
-  button.classList.add('taken');
-  button.textContent = '✓ Taken';
-  
-  // Disable the item info links
-  const info = item.querySelector('.info');
-  const links = info.querySelectorAll('a');
-  links.forEach(link => {
-    link.style.pointerEvents = 'none';
-    link.style.opacity = '0.5';
-  });
-  
-  const thankYouMessage = "With a Grateful Heart 💖\n\nThank you so much for your generosity and for choosing a gift from my wishlist! It means so much to me that you took the time to choose something I truly dreamed of having.\n\nYour thoughtfulness and kindness have made my 18th birthday even more special and memorable. More than the gift itself, I will always appreciate the love and generosity behind it.\n\nThank you for being part of my dreams and for making this beautiful milestone in my life even more meaningful. I feel truly blessed to have you as part of my debut celebration.\n\nWith love and heartfelt gratitude,\n\nMischka";
-}
-function resetAll() {
-  // Reset all items
-  const items = document.querySelectorAll('.item');
-  items.forEach(item => {
-    // Reset commit buttons
-    const buttons = item.querySelectorAll('.actions .btn');
-    const commitBtn = buttons[0];
-    if (commitBtn.textContent === '✓ Taken') {
-      commitBtn.textContent = 'Commit';
-      commitBtn.classList.remove('taken');
+const ITEMS_PREHCARD = [
+  { name: "Strokes Soft Veil Foundation", image: "images/Strokes Soft Veil Foundation.png", store: "https://s.lazada.com.ph/s.Z70Pv0?c=v", price: "698", description: "Strokes brand liquid foundation", taken: false },
+  { name: "Strokes face flash", image: "images/Strokes face flash.png", store: "https://s.lazada.com.ph/s.Z70PAw?c=s", price: "548", description: "Strokes brand face illuminator/highlighter", taken: false },
+  { name: "L'Oreal Concealer", image: "images/L'Oreal Concealer.png", store: "https://s.lazada.com.ph/s.Z70lX3?c=w", price: "699", description: "L'Oreal brand concealer", taken: false },
+  { name: "Glam Hour blush", image: "images/Glam Hour blush.png", store: "https://s.lazada.com.ph/s.Z70lew?c=w", price: "599", description: "Glam Hour brand blush", taken: false },
+  { name: "Nars radiant creamy concealer", image: "images/Nars radiant creamy concealer.png", store: "https://s.lazada.com.ph/s.Z7DEyC?c=d", price: "1,827", description: "NARS brand creamy concealer", taken: false },
+  { name: "Laura Mercier loose powder", image: "images/Laura Mercier loose powder.png", store: "https://s.lazada.com.ph/s.Z7DwVs?c=d", price: "1,207", description: "Laura Mercier brand loose setting powder", taken: false },
+  { name: "Teviant fixing spray", image: "images/Teviant fixing spray.png", store: "https://s.lazada.com.ph/s.Z7Dw6i?c=d", price: "895", description: "Teviant brand makeup setting/fixing spray", taken: false },
+  { name: "Teviant blush stick", image: "images/Teviant blush stick.png", store: "https://s.lazada.com.ph/s.Z7DwRV?c=d", price: "795", description: "Teviant brand cream blush stick", taken: false },
+  { name: "Absidy powder blush", image: "images/Absidy powder blush.png", store: "https://s.lazada.com.ph/s.Z7Dw9a?c=d", price: "395", description: "Absidy brand powder blush", taken: false },
+  { name: "Benefit Moone rich berry blush", image: "images/Benefit Moone rich berry blush.png", store: "https://s.lazada.com.ph/s.Z7Dwme?c=d", price: "2,150", description: "Benefit brand Moone Birch blush", taken: false },
+  { name: "Judydoll palette", image: "images/Judydoll palette.png", store: "https://s.lazada.com.ph/s.Z7Dwpa?c=d", price: "599", description: "Judydoll brand makeup palette", taken: false },
+  { name: "Clinique cheek pop blush", image: "images/Clinique cheek pop blush.png", store: "https://s.lazada.com.ph/s.Z7DwsU?c=d", price: "1,170", description: "Clinique Cheek Pop line blush", taken: false },
+  { name: "Lancome ultra wear foundation", image: "images/Lancome ultra wear foundation.png", store: "https://s.lazada.com.ph/s.Z7Dwwy?c=d", price: "2,450", description: "Lancôme Ultra Wear long-wear liquid foundation", taken: false },
+  { name: "Charlotte tilbury foundation", image: "images/Charlotte tilbury foundation.png", store: "https://s.lazada.com.ph/s.Z7DwCs?c=d", price: "2,810", description: "Charlotte Tilbury brand foundation", taken: false },
+  { name: "Charlotte tilbury concealer", image: "images/Charlotte tilbury concealer.png", store: "https://s.lazada.com.ph/s.Z7DDXJ?c=d", price: "1,908", description: "Charlotte Tilbury brand concealer", taken: false },
+  { name: "Nars liquid blush", image: "images/Nars liquid blush.png", store: "https://s.lazada.com.ph/s.Z7DDkK?c=d", price: "1,180", description: "NARS brand liquid blush", taken: false },
+  { name: "Teviant radiant primer", image: "images/Teviant radiant primer.png", store: "https://s.lazada.com.ph/s.Z7DBZv?c=d", price: "975", description: "Teviant brand radiant makeup primer", taken: false },
+  { name: "Teviant trio palette", image: "images/Teviant trio palette.png", store: "https://s.lazada.com.ph/s.Z7DBMy?c=d", price: "675", description: "Teviant brand 3-shade makeup palette", taken: false }
+];
+
+const STORAGE_KEY = "bday_wishlist_v1";
+const JSONBIN_API = "https://api.jsonbin.io/v3/b/";
+const JSONBIN_KEY = "YOUR_JSONBIN_API_KEY";
+const JSONBIN_BIN_ID = "YOUR_JSONBIN_BIN_ID";
+
+let items = [];
+
+function load() {
+  fetchCommits().then(serverItems => {
+    if (serverItems && serverItems.length > 0) {
+      items = serverItems;
+    } else {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) items = JSON.parse(raw);
+      } catch(e) { items = []; }
+      if (!Array.isArray(items)) items = ITEMS_PREHCARD.map(i => ({...i}));
     }
-    
-    // Re-enable links
-    const info = item.querySelector('.info');
-    const links = info.querySelectorAll('a');
-    links.forEach(link => {
-      link.style.pointerEvents = 'auto';
-      link.style.opacity = '1';
-    });
+    render();
+  }).catch(() => {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) items = JSON.parse(raw);
+    } catch(e) { items = []; }
+    if (!Array.isArray(items)) items = ITEMS_PREHCARD.map(i => ({...i}));
+    render();
   });
 }
+
+function save() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+}
+
+async function fetchCommits() {
+  try {
+    const response = await fetch(`${JSONBIN_API}${JSONBIN_BIN_ID}`, {
+      headers: { 'X-Master-Key': JSONBIN_KEY }
+    });
+    const data = await response.json();
+    if (data.status === 200 && data.record && Array.isArray(data.record.items)) {
+      return data.record.items;
+    }
+    return [];
+  } catch (e) {
+    return [];
+  }
+}
+
+async function saveCommits() {
+  try {
+    const response = await fetch(`${JSONBIN_API}${JSONBIN_BIN_ID}`, {
+      method: 'PUT',
+      headers: {
+        'X-Master-Key': JSONBIN_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ items: items })
+    });
+    const data = await response.json();
+    if (data.status === 200 || data.status === 201) {
+      return true;
+    }
+    console.error("Failed to save commits:", data);
+    return false;
+  } catch (e) {
+    console.error("Error saving commits:", e);
+    return false;
+  }
+}
+
+function render() {
+  const el = document.getElementById("items");
+  if (items.length === 0) {
+    el.innerHTML = `
+      <div class="empty">
+        <h3>No items yet</h3>
+        <p>Add a wishlist item below, or share the QR code with friends to start the list.</p>
+      </div>
+    `;
+  } else {
+    el.innerHTML = '';
+    items.forEach((it, i) => {
+      const takenClass = it.taken ? 'taken' : '';
+      const takenLabel = it.taken ? 'Taken' : 'Commit';
+      const html = `
+        <div class="item" data-index="${i}">
+          <div class="image" style="background-image: url('${it.image}'); background-size: cover; background-position: center;"></div>
+          <div class="info">
+            <div class="name">${escapeHtml(it.name)}</div>
+            <div class="details">$${formatPrice(it.price)} &nbsp;·&nbsp; ${escapeHtml(it.description || '')}</div>
+            <a href="${escapeHtml(it.store)}" class="store" target="_blank" rel="noopener">View on Lazada</a>
+          </div>
+          <div class="actions">
+            <button class="btn ${takenClass}" onclick="toggleTaken(${i})">${takenLabel}</button>
+            <button class="btn" onclick="deleteItem(${i})">✕</button>
+          </div>
+        </div>
+      `;
+      el.innerHTML += html;
+    });
+  }
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"'']/g, c => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[c]));
+}
+
+function formatPrice(p) {
+  return Number(p).toFixed(2).replace('.00', '').replace(/(\d)(?=(\d{3})+(?!\\d))/g, '$1,');
+}
+
+function toggleTaken(i) {
+  items[i].taken = !items[i].taken;
+  save();
+  saveCommits().then(success => {
+    if (!success) {
+      items[i].taken = !items[i].taken;
+    }
+  });
+  render();
+}
+
+function deleteItem(i) {
+  if (confirm("Remove this item from the wishlist?")) {
+    items.splice(i, 1);
+    save();
+    saveCommits();
+    render();
+  }
+}
+
+function resetAll() {
+  if (confirm("Reset all items to available? This cannot be undone.")) {
+    items = [];
+    save();
+    saveCommits();
+    render();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", load);
+</script>
 </script>
 </body>
 </html>
