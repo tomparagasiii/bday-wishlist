@@ -335,6 +335,7 @@
     let items = [];
 
     function load() {
+      let items = [];
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
         if (raw) {
@@ -344,7 +345,7 @@
         }
       } catch (e) {
         items = ITEMS_PREHCARD.map(i => ({...i}));
-      } catch (e) { items = []; }
+      }
       if (!Array.isArray(items)) items = [];
       if (items.length === 0) {
         items = ITEMS.map(d => ({ id: d.id, name: d.name, shade: d.shade, store: d.store, price: d.price, photo: d.photo, desc: d.desc, state: 0 }));
