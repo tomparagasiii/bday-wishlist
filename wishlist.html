@@ -465,6 +465,10 @@
     });
 
     document.addEventListener("DOMContentLoaded", load);
+    // Also call load immediately if DOM is already ready
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      load();
+    }
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeThankyou(); });
   </script>
 </body>
