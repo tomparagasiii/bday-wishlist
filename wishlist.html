@@ -358,9 +358,16 @@
     }
 
       return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;" }[c]));
-            function escapeHtml(s) {
+                function escapeHtml(s) {
       return String(s).replace(/[&<>"']/g, function(c) {
-        return { "&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;" }[c];
+        switch(c) {
+          case "&": return "&amp;";
+          case "<": return "&lt;";
+          case ">": return "&gt;";
+          case "'": return "&#39;";
+          case '"': return "&quot;";
+          default: return c;
+        }
       });
     }</script>
 </body>
