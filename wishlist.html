@@ -384,15 +384,15 @@
         const taken = s >= 1;
         const purchased = s >= 2;
         const storeHtml = purchased
-          ? "<a href=\"" + escapeHtml(it.store) + "\" class=\"purchased\">✓ Purchased — link disabled</a>"
+          ? '<a href="' + escapeHtml(it.store) + '" class="purchased">✓ Purchased - link disabled</a>'
           : (taken
-            ? "<span class=\"tag\">✦ Claimed</span><a href=\"" + escapeHtml(it.store) + "\">" + escapeHtml(it.store) + "</a>"
-            : "<a href=\"" + escapeHtml(it.store) + "\">" + escapeHtml(it.store) + "</a>");
+            ? '<span class="tag">✦ Claimed</span><a href="' + escapeHtml(it.store) + '">' + escapeHtml(it.store) + '</a>'
+            : '<a href="' + escapeHtml(it.store) + '">' + escapeHtml(it.store) + '</a>');
         const btn = purchased
-          ? "<button class=\"btn btn-success\" disabled>✓ Confirmed</button>"
+          ? '<button class="btn btn-success" disabled>✓ Confirmed</button>'
           : (taken
-            ? "<button class=\"btn btn-success\" id=\"confirmBtn-" + it.id + "\">Confirm purchase → link disabled</button>"
-            : "<button class=\"btn btn-primary\" id=\"commitBtn-" + it.id + "\">Commit</button>");
+            ? '<button class="btn btn-success" id="confirmBtn-' + it.id + '">Confirm purchase - link disabled</button>'
+            : '<button class="btn btn-primary" id="commitBtn-' + it.id + '">Commit</button>');
         return '
           <div class="item ">
             <div class="photo">
