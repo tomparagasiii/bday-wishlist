@@ -384,32 +384,32 @@
         const taken = s >= 1;
         const purchased = s >= 2;
         const storeHtml = purchased
-          ? `<a href="${escapeHtml(it.store)}" class="purchased">✓ Purchased — link disabled</a>`
+          ? "<a href=\"" + escapeHtml(it.store) + "\" class=\"purchased\">✓ Purchased — link disabled</a>"
           : (taken
-            ? `<span class="tag">✦ Claimed</span><a href="${escapeHtml(it.store)}">${escapeHtml(it.store)}</a>`
-            : `<a href="${escapeHtml(it.store)}">${escapeHtml(it.store)}</a>`);
+            ? "<span class=\"tag\">✦ Claimed</span><a href=\"" + escapeHtml(it.store) + "\">" + escapeHtml(it.store) + "</a>"
+            : "<a href=\"" + escapeHtml(it.store) + "\">" + escapeHtml(it.store) + "</a>");
         const btn = purchased
-          ? `<button class="btn btn-success" disabled>✓ Confirmed</button>`
+          ? "<button class=\"btn btn-success\" disabled>✓ Confirmed</button>"
           : (taken
-            ? `<button class="btn btn-success" id="confirmBtn-${it.id}">Confirm purchase → link disabled</button>`
-            : `<button class="btn btn-primary" id="commitBtn-${it.id}">Commit</button>`);
-        return `
-          <div class="item ${purchased?'purchased':''}">
+            ? "<button class=\"btn btn-success\" id=\"confirmBtn-" + it.id + "\">Confirm purchase → link disabled</button>"
+            : "<button class=\"btn btn-primary\" id=\"commitBtn-" + it.id + "\">Commit</button>");
+        return '
+          <div class="item ">
             <div class="photo">
-              <img src="${escapeHtml(it.photo)}" alt="${escapeHtml(it.name)}" loading="lazy">
-              ${taken ? `<div class="badge">Claimed</div>` : ''}
+              <img src="' + escapeHtml(it.photo) + '" alt="' + escapeHtml(it.name) + '" loading="lazy">
+              ' + (taken ? '<div class="badge">Claimed</div>' : '') + '
             </div>
             <div class="info">
               <div class="top">
-                <div class="name">${escapeHtml(it.name)}</div>
-                <div class="price">${fmtPrice(it.price)}</div>
+                <div class="name">' + escapeHtml(it.name) + '</div>
+                <div class="price">' + fmtPrice(it.price) + '</div>
               </div>
-              <div class="desc">${escapeHtml(it.desc)}</div>
-              <div class="stores">${storeHtml}</div>
+              <div class="desc">' + escapeHtml(it.desc) + '</div>
+              <div class="stores">' + storeHtml + '</div>
             </div>
-            <div class="actions">${btn}</div>
+            <div class="actions">' + btn + '</div>
           </div>
-        `;
+        ';
       }).join('');
 
       const confirmed = items.filter(i => i.state === 2).length;
