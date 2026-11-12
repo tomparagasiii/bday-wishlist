@@ -357,9 +357,9 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
     }
 
+      return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;" }[c]));
     function escapeHtml(s) {
-      return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[c]));
-    }
+      return String(s).replace(/[&<>"'"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",""":"&quot;" }[c]));
 
     function fmtPrice(p) {
       const parts = String(p).split(".");
